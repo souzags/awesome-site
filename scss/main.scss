@@ -2,10 +2,20 @@
 @import 'colors';
 
 body {
-    position: absolute;
     text-align: center;
+    font-family: NotoSans-Regular;
     p {
         text-align: justify;
         margin: auto;
     }
+}
+
+.content {
+    margin: 0px 200px 0px 200px;
+}
+
+.navbar {
+    margin: 0px;
+    border: 0px;
+    background-color: $color-3;
 }

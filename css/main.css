@@ -24,12 +24,22 @@ body {
 }
 
 body {
-  position: absolute;
   text-align: center;
+  font-family: NotoSans-Regular;
 }
 
 body p {
   text-align: justify;
   margin: auto;
+}
+
+.content {
+  margin: 0px 200px 0px 200px;
+}
+
+.navbar {
+  margin: 0px;
+  border: 0px;
+  background-color: #011f4b;
 }
 /*# sourceMappingURL=main.css.map */
