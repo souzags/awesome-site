@@ -2,6 +2,8 @@
 @import 'colors';
 
 body {
+    margin: 0px;
+    padding: 0px;
     text-align: center;
     font-family: NotoSans-Regular;
     p {
@@ -18,4 +20,20 @@ body {
     margin: 0px;
     border: 0px;
     background-color: $color-3;
+
+    ul {
+        list-style-type: none;
+        margin: 0px;
+        padding: 0px;
+
+        li {
+            display: inline;
+            
+            a {
+                display: inline-block;
+                padding: 8px;
+                background-color: $color-3;
+            }
+        }
+    }
 }
