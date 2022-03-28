@@ -5,15 +5,17 @@
         <title>Awesome Prime Calculator</title>
         <link href="css/main.css" rel="stylesheet" type="text/css"/>
         <script src="js/jquery.js"></script>
+        <script src="js/functions.js"></script>
     </head>
     <body>
         <div class="nav-placeholder"></div>
 
-        <script>
-            $(function(){
-                $(".nav-placeholder").load("common/navbar.html");
-            });
-        </script>
+        <div class="navbar">
+            <button class="navlink" onclick="showSection(event, 'primes')">Primos</button>
+            <button class="navlink" onclick="showSection(event, 'calculator')">Calculadora</button>
+            <button class="navlink" onclick="showSection(event, 'code')">O Código</button>
+            <button class="navlink" onclick="showSection(event, 'about')">Sobre</button>
+        </div>
 
         <div class="content" id="primes">
             
