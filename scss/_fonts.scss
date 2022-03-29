@@ -1,19 +1,41 @@
+// Noto Sans font faces
+
 @font-face {
-    font-family: NotoSans-Regular;
+    font-family: noto-sans;
     src: url(/fonts/NotoSans-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
-    font-family: NotoSans-Italic;
+    font-family: noto-sans;
     src: url(/fonts/NotoSans-Italic.ttf);
+    font-weight: normal;
+    font-style: italic;
 }
 
 @font-face {
-     font-family: NotoSans-Bold;
+     font-family: noto-sans;
      src: url(/fonts/NotoSans-Bold.ttf);
+     font-weight: bold;
+     font-style: normal;
  }
 
  @font-face {
-     font-family: NotoSans-BoldItalic;
+     font-family: noto-sans;
      src: url(/fonts/NotoSans-BoldItalic.ttf);
+     font-weight: bold;
+     font-style: italic;
+ }
+
+ // Crushed font faces
+ @font-face {
+     font-family: crushed;
+     src: url(/fonts/Crushed-Regular.ttf);
+ }
+
+ // Boogaloo font faces
+ @font-face {
+     font-family: boogaloo;
+     src: url(/fonts/Boogaloo-Regular.ttf);
  }

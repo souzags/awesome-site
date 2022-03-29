@@ -1,36 +1,52 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="pt-br">
     <head>
         <title>Awesome Prime Calculator</title>
-        <link href="css/main.css" rel="stylesheet" type="text/css"/>
+
+        <meta charset="utf-8" />
+    
+        <link href="css/main.css" rel="stylesheet" type="text/css" />
+        <link href="img/favicon/favicon.ico" rel="icon" type="image/x-icon" />
+    
         <script src="js/jquery.js"></script>
         <script src="js/functions.js"></script>
     </head>
     <body>
-        <div class="nav-placeholder"></div>
+
+        <div class="header">
+            <img src="img/logo.svg">
+        </div>
 
         <div class="navbar">
-            <button class="navlink" onclick="showSection(event, 'primes')">Primos</button>
-            <button class="navlink" onclick="showSection(event, 'calculator')">Calculadora</button>
-            <button class="navlink" onclick="showSection(event, 'code')">O Código</button>
-            <button class="navlink" onclick="showSection(event, 'about')">Sobre</button>
+            <button class="navlink" id="defaultSection" onclick="showSection(event, 'primes')">PRIMOS</button>
+            <button class="navlink" onclick="showSection(event, 'calculator')">CALCULADORA</button>
+            <button class="navlink" onclick="showSection(event, 'code')">PROGRAMANDO</button>
+            <button class="navlink" onclick="showSection(event, 'about')">SOBRE</button>
         </div>
+
+        <script>
+            $(function () {
+                $("#defaultSection").click();
+            });
+        </script>
 
         <div class="content" id="primes">
             
-            <h1>Números Primos</h1>
-                <h2>O que são números primos?</h2>
-                    <p>Na matemática, um <i>número primo</i> é um número natural maior que 1 e que não é o produto de outros dois números naturais menores. Por exemplo, o 5 é primo por que o único jeito de escrevê-lo como um produto é 5 x 1. Já o 4 não é primo por que pode ser escrito como 2 x 2. Qui ipsum laboris pariatur irure dolor mollit proident. Velit elit adipisicing adipisicing dolore id. Amet sint qui aliqua Lorem eu id id magna duis. Ipsum nostrud nostrud duis dolore ullamco veniam dolore velit in in nostrud culpa. Nulla qui aliqua do ullamco cillum et magna amet amet eiusmod laborum officia id. Dolor deserunt velit aute amet veniam proident consequat.</p>
-                <h2>Como encontrar números primos?</h2>
-                    <p>Do reprehenderit adipisicing non nulla occaecat. Adipisicing aute sit laboris ad adipisicing reprehenderit quis veniam ex est magna magna reprehenderit aliqua. Enim est sint cupidatat amet ea. Ad nulla proident nulla nisi sunt dolor. Cillum esse excepteur enim ex ullamco reprehenderit aute. Nulla do dolore id commodo laboris. Cillum veniam pariatur quis quis Lorem ex elit reprehenderit. Commodo consectetur tempor et incididunt duis qui laboris enim. Irure veniam exercitation quis quis reprehenderit eiusmod pariatur est culpa eu aute culpa consequat. Ut laborum dolore minim non tempor enim ex et nostrud veniam velit adipisicing Lorem. Eu deserunt aliqua irure Lorem labore minim velit incididunt laborum ea in commodo. Culpa commodo amet laboris culpa ipsum Lorem laboris reprehenderit aute non irure in occaecat excepteur. Do sit proident reprehenderit mollit dolore elit voluptate anim id magna ipsum esse nulla.</p>
-
+                <h1>O que são?</h1>
+                <p>Um número primo é um número natural maior que 1 e que não é formado pelo produto de outros dois números menores, ou seja, só é divisível por 1 e por ele mesmo. O 5, por exemplo, pode ser formado apenas por 1x5. Já o 4 pode ser formado por 2x2 e, portanto, não é primo.</p>
+                <h1>Como calcular?</h1>
+                <p>No mundo dos computadores, algoritmos são o passo a passo para resolver um problema. Um exemplo famoso é a receita de bolo: por meio da receita, nós conseguimos resolver o problema de transformar ingredientes em um bolo delicioso!</p>
+                <p>No caso dos números primos, existem alguns algoritmos que conseguem gerar uma sequência de primos dentro de um dado intervalo. O mais antigo deles, o Crivo de Eratóstenes é um algoritmo simples e um dos mais eficientes para encontrar primos pequenos. Foi proposto por Eratóstenes de Cirene, um matemático grego que viveu no século III a.C.</p>
+                <img src="img/eratostenes.png">
         </div>
 
         <div class="content" id="calculator">
 
-            <h1>Calculator</h1>
-            <p>Occaecat et exercitation veniam aliquip nisi sit enim duis aute do eiusmod exercitation nisi. Officia deserunt sit dolor mollit ut dolor do. Nisi qui id dolore dolore voluptate quis. Adipisicing culpa aliquip nulla excepteur duis culpa in nisi eu mollit exercitation Lorem. Elit laboris ut aliqua dolor ut pariatur tempor qui culpa sunt dolore tempor. Nostrud voluptate fugiat amet cillum adipisicing proident aliquip. Eu laboris cupidatat anim mollit dolore dolore sunt in. Sunt culpa magna ad fugiat veniam officia cillum veniam. Aliquip dolore elit dolor est et nostrud sit mollit ad occaecat irure sint in aute. Lorem velit anim et non commodo aliquip proident veniam consequat.</p>
+            <p>Esta é uma implementação do Crivo de Eratóstenes. Ela exibe uma lista com todos os primos contidos entre 1 e o número que você inserir.</p>
+            <input id="calcInput" type="number" autofocus="autofocus">
+            <button class="button" id="calcButton" onclick="getPrimes()">Pronto!</button>
+            <div id="calcOutput"></div>
 
         </div>
 
@@ -43,8 +59,14 @@
 
         <div class="content" id="about">
 
-            <h1>Sobre</h1>
-            <p>Commodo elit incididunt commodo Lorem cillum ullamco laboris proident adipisicing non Lorem elit. Est et cillum ullamco eiusmod sint cupidatat id consectetur velit sit. Consequat ad ullamco nostrud et dolor. Minim esse in Lorem fugiat proident ex. Ipsum tempor voluptate mollit dolor officia pariatur ad proident. Cillum laboris nostrud id sit Lorem ea. Eiusmod cupidatat incididunt ea magna aliqua quis ipsum officia magna anim do amet sunt culpa. Lorem dolore Lorem tempor deserunt et ipsum tempor voluptate quis ut id. In commodo magna cillum ad culpa nisi culpa qui consequat proident consequat. Magna officia aliquip mollit sit officia occaecat veniam consectetur aliquip id ullamco adipisicing excepteur occaecat. Aute magna sit enim quis ullamco non reprehenderit officia ullamco eiusmod minim. Adipisicing labore qui in velit sunt ea aute ex dolor et. Labore qui dolor commodo pariatur irure in laboris id.</p>
+            <h1>Quem sou eu?</h1>
+            <p>Oi! Eu sou o Gustavo, estudante de Ciência da Computação na Universidade Federal do Oeste do Pará (UFOPA). Gosto de jogos, programação, computadores, matemática e tecnologia em geral.</p>
+            <h1>Por que fiz esse site?</h1>
+            <p>Pra resumir bem resumido... ter nota em Programação para Web. Esse site é um projeto básico para aprender conceitos da criação de websites. Ele foi feito com HTML e JavaScript, e estilizado com CSS. Além disso, apesar do tema bem aleatório, é uma boa oportunidade pra exercitar a implementação de algoritmos - que nesse caso é o <i>Crivo de Eratóstenes</i> :)</p>
+
+        </div>
+
+        <div class="footer">
 
         </div>
     </body>

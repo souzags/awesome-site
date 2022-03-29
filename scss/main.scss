@@ -5,35 +5,60 @@ body {
     margin: 0px;
     padding: 0px;
     text-align: center;
-    font-family: NotoSans-Regular;
+    font-family: noto-sans;
+    background-color: $cream;
     p {
         text-align: justify;
         margin: auto;
     }
 }
 
-.content {
-    margin: 0px 200px 0px 200px;
+.header {
+    background-color: $french-lilac;
+    padding: 14px 16px;
 }
 
 .navbar {
     margin: 0px;
     border: 0px;
-    background-color: $color-3;
+    overflow: hidden;
+    background-color: $outer-space-crayola;
+    
+    button {
+        background-color: inherit;
+        float: left;
+        color: white;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        font-size: larger;
+        font-family: boogaloo;
+        transition: 0.2s;
 
-    ul {
-        list-style-type: none;
-        margin: 0px;
-        padding: 0px;
+        &:hover {
+            background-color: $rich-black-fogra-29-transp;
+        }
 
-        li {
-            display: inline;
-            
-            a {
-                display: inline-block;
-                padding: 8px;
-                background-color: $color-3;
-            }
+        &.active {
+            background-color: $rich-black-fogra-29;
+            color: $pastel-pink;
         }
     }
+}
+
+.content {
+    margin: 0px 200px 0px 200px;
+    font-size: larger;
+    color: $rich-black-fogra-29;
+
+    h1 {
+        font-family: boogaloo;
+        font-size: 28pt;
+        color: inherit;
+    }
+}
+
+.footer {
+    background-color: $outer-space-crayola;
 }
