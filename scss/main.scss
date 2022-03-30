@@ -13,12 +13,17 @@ body {
     }
 }
 
+#page-container {
+    position: relative;
+    min-height: 100vh;
+}
+
 .header {
     background-color: $french-lilac;
     padding: 14px 16px;
 }
 
-.navbar {
+#tabBar {
     margin: 0px;
     border: 0px;
     overflow: hidden;
@@ -47,18 +52,79 @@ body {
     }
 }
 
-.content {
-    margin: 0px 200px 0px 200px;
+#content-wrap {
+    padding-bottom: 4.0rem;
+}
+
+.tabContent {
     font-size: larger;
     color: $rich-black-fogra-29;
+    display: hide;
+    padding: 2rem 10rem 4rem;
 
     h1 {
         font-family: boogaloo;
         font-size: 28pt;
         color: inherit;
     }
+
+    ol {
+        text-align: left;
+    }
+
+    pre {
+        text-align: left;
+    }
 }
 
-.footer {
+#input-container {
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    height: 24px;
+
+    input {
+        height: 100%;
+    }
+
+    button {
+        height: 100%;
+        cursor: pointer;
+    }
+}
+
+#fixed-height-container {
+    width: 400px;
+    height: 350px;
+    padding: 3px;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     background-color: $outer-space-crayola;
+    color: white;
+
+    h2 {
+        margin: 0px;
+        padding: 3px;
+        font-size: large;
+    }
+
+    
+}
+
+#output-container {
+    height: 300px;
+    overflow: auto;
+    background-color: white;
+    color: $rich-black-fogra-29;
+    padding-left: 2ex;
+}
+
+#footer {
+    background-color: $outer-space-crayola;
+    color: white;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 4.0rem;
 }

@@ -1,6 +1,17 @@
-# Awesome Site
+# Awesome Prime Calculator
 
 ## Sobre
-Este é um site sobre um tema que eu escolhi sem pensar direito: números primos. A razão disso é que números primos são legais, e é bem divertido conhecer os algoritmos que existem para gerar números primos :D
 
-Até agora, o site contém as informações de 0 algoritmos
+Este site traz uma descrição dos _números primos_, bem como do _Crivo de Eratóstenes_. Além disso, inclui uma implementação desse algoritmo em JavaScript.
+
+## Instalação
+
+A instalação do site é relativamente simples:
+
+### Se você tem o Visual Studio Code
+
+Se você possui o MS Visual Studio Code, instale e ative a extensão Live Server. Depois disso, basta abrir o servidor local.
+
+### Se você tem uma instalação LAMP ou XAMPP
+
+Se você possui uma instalação LAMP ou XAMPP, ponha o conteúdo deste repositório na raiz do seu servidor.

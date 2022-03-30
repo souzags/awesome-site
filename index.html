@@ -1,73 +1,46 @@
 <!DOCTYPE html>
 
 <html lang="pt-br">
-    <head>
-        <title>Awesome Prime Calculator</title>
 
-        <meta charset="utf-8" />
-    
-        <link href="css/main.css" rel="stylesheet" type="text/css" />
-        <link href="img/favicon/favicon.ico" rel="icon" type="image/x-icon" />
-    
-        <script src="js/jquery.js"></script>
-        <script src="js/functions.js"></script>
-    </head>
-    <body>
+<head>
+    <title>Awesome Prime Calculator</title>
 
+    <meta charset="utf-8" />
+
+    <link href="css/main.css" rel="stylesheet" type="text/css" />
+    <link href="img/favicon/favicon.ico" rel="icon" type="image/x-icon" />
+
+    <script src="js/jquery.js"></script>
+    <script src="js/functions.js"></script>
+    <script>
+        $(document).ready($(function () {
+            $("#tabBar").load("content/tabBar.html");
+            $("#tab1").load("content/_tab1.html");
+            $("#tab2").load("content/_tab2.html");
+            $("#tab3").load("content/_tab3.html");
+            $("#tab4").load("content/_tab4.html");
+            $("#footer").load("content/footer.html");
+            $(".tabContent").hide();
+            $("#tab1").show();
+        }));
+    </script>
+</head>
+
+<body>
+    <div id="page-container">
         <div class="header">
             <img src="img/logo.svg">
         </div>
-
-        <div class="navbar">
-            <button class="navlink" id="defaultSection" onclick="showSection(event, 'primes')">PRIMOS</button>
-            <button class="navlink" onclick="showSection(event, 'calculator')">CALCULADORA</button>
-            <button class="navlink" onclick="showSection(event, 'code')">PROGRAMANDO</button>
-            <button class="navlink" onclick="showSection(event, 'about')">SOBRE</button>
+    
+        <div id="tabBar"></div>
+        <div id="content-wrap">
+            <div class="tabContent" id="tab1"></div>
+            <div class="tabContent" id="tab2"></div>
+            <div class="tabContent" id="tab3"></div>
+            <div class="tabContent" id="tab4"></div>
         </div>
+        <div id="footer"></div>
+    </div>
+</body>
 
-        <script>
-            $(function () {
-                $("#defaultSection").click();
-            });
-        </script>
-
-        <div class="content" id="primes">
-            
-                <h1>O que são?</h1>
-                <p>Um número primo é um número natural maior que 1 e que não é formado pelo produto de outros dois números menores, ou seja, só é divisível por 1 e por ele mesmo. O 5, por exemplo, pode ser formado apenas por 1x5. Já o 4 pode ser formado por 2x2 e, portanto, não é primo.</p>
-                <h1>Como calcular?</h1>
-                <p>No mundo dos computadores, algoritmos são o passo a passo para resolver um problema. Um exemplo famoso é a receita de bolo: por meio da receita, nós conseguimos resolver o problema de transformar ingredientes em um bolo delicioso!</p>
-                <p>No caso dos números primos, existem alguns algoritmos que conseguem gerar uma sequência de primos dentro de um dado intervalo. O mais antigo deles, o Crivo de Eratóstenes é um algoritmo simples e um dos mais eficientes para encontrar primos pequenos. Foi proposto por Eratóstenes de Cirene, um matemático grego que viveu no século III a.C.</p>
-                <img src="img/eratostenes.png">
-        </div>
-
-        <div class="content" id="calculator">
-
-            <p>Esta é uma implementação do Crivo de Eratóstenes. Ela exibe uma lista com todos os primos contidos entre 1 e o número que você inserir.</p>
-            <input id="calcInput" type="number" autofocus="autofocus">
-            <button class="button" id="calcButton" onclick="getPrimes()">Pronto!</button>
-            <div id="calcOutput"></div>
-
-        </div>
-
-        <div class="content" id="code">
-            
-            <h1>Código</h1>
-            <p>Laboris consequat incididunt sunt ea dolor ex aute eu excepteur exercitation. Officia elit magna non cillum occaecat aute ipsum dolor eu deserunt. Voluptate commodo dolore officia laboris occaecat incididunt sit culpa occaecat ullamco amet irure. Commodo laborum sit pariatur dolor laboris proident cillum aliqua cillum. Irure voluptate adipisicing quis ea duis nostrud adipisicing. In labore culpa nostrud reprehenderit et reprehenderit elit sunt. Deserunt labore aliqua magna eiusmod officia nostrud aliqua reprehenderit irure veniam ex.</p>
-
-        </div>
-
-        <div class="content" id="about">
-
-            <h1>Quem sou eu?</h1>
-            <p>Oi! Eu sou o Gustavo, estudante de Ciência da Computação na Universidade Federal do Oeste do Pará (UFOPA). Gosto de jogos, programação, computadores, matemática e tecnologia em geral.</p>
-            <h1>Por que fiz esse site?</h1>
-            <p>Pra resumir bem resumido... ter nota em Programação para Web. Esse site é um projeto básico para aprender conceitos da criação de websites. Ele foi feito com HTML e JavaScript, e estilizado com CSS. Além disso, apesar do tema bem aleatório, é uma boa oportunidade pra exercitar a implementação de algoritmos - que nesse caso é o <i>Crivo de Eratóstenes</i> :)</p>
-
-        </div>
-
-        <div class="footer">
-
-        </div>
-    </body>
 </html>
