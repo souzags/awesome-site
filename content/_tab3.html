@@ -1,42 +1,54 @@
 <h1>O algoritmo</h1>
-<p>O <i>Crivo de Eratóstenes funciona da seguinte maneira:</i></p>
-<ol>
-    <li>Crie uma lista de inteiros consecutivos de 2 até n;</li>
-    <li>Seja p = 2, o menor número primo;</li>
-    <li>Marque todos o múltiplos de p (2p, 3p, 4p...) na lista (o p não deve ser marcado);</li>
-    <li>Encontre o menor inteiro maior que p <b>que não esteja marcado</b>. Se não houver, pare. Caso contrário, faça p
-        receber esse número e repita a partir do passo 3;</li>
-</ol>
-<p>Quando o programa termina, os números que não estão marcados são primos.</p>
+
+<div class="content">
+    <div class="content-container">
+        <img src="img/AnimationEratosthenes.gif" width="400px" />
+    </div>
+    <div class="content-container">
+        <p>O <i>Crivo de Eratóstenes funciona da seguinte maneira:</i></p>
+        <ol>
+            <li>Crie uma lista de inteiros consecutivos de 2 até n;</li>
+            <li>Seja p = 2, o menor número primo;</li>
+            <li>Marque todos o múltiplos de p (2p, 3p, 4p...) na lista (o p não deve ser marcado);</li>
+            <li>Encontre o menor inteiro maior que p <b>que não esteja marcado</b>. Se não houver, pare. Caso contrário,
+                faça p
+                receber esse número e repita a partir do passo 3;</li>
+        </ol>
+        <p>Quando o programa termina, os números que não estão marcados são primos.</p>
+    </div>
+</div>
+
 <h1>O código</h1>
-<pre>
-<code>
-    function getPrimes() {
-        maxNumber = parseInt(document.getElementById("calcInput").value);
-        output = document.getElementById("output-container");
-        n = new Array(maxNumber + 1);
-    
-        n.fill(true);
-        output.innerHTML = "";
-    
-        n[0] = n[1] = false;
-    
-        for (let i = 2; i < n.length - 1; i++) {
-    
-            if (n[i]) {
-                for (let j = i + 1; j < n.length; j++) {
-                    if (j % i == 0) {
-                        n[j] = false;
+<div class="content">
+    <pre>
+        <code>
+            function getPrimes() {
+                maxNumber = parseInt(document.getElementById("calcInput").value);
+                output = document.getElementById("output-container");
+                n = new Array(maxNumber + 1);
+            
+                n.fill(true);
+                output.innerHTML = "";
+            
+                n[0] = n[1] = false;
+            
+                for (let i = 2; i &lt; n.length - 1; i++) {
+            
+                    if (n[i]) {
+                        for (let j = i + 1; j &lt; n.length; j++) {
+                            if (j % i == 0) {
+                                n[j] = false;
+                            }
+                        }
+                    }
+                }
+            
+                for (let i = 0; i &lt; n.length; i++) {
+                    if (n[i]) {
+                        output.innerHTML += "&lt;p&gt;" + i + "&lt;/p&gt;";
                     }
                 }
             }
-        }
-    
-        for (let i = 0; i < n.length; i++) {
-            if (n[i]) {
-                output.innerHTML += "&lt;p&gt;" + i + "&lt;/p&gt;";
-            }
-        }
-    }
-</code>
-</pre>
+        </code>
+        </pre>
+</div>

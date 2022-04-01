@@ -97,7 +97,7 @@ body p {
   font-size: larger;
   color: #040f0fff;
   display: hide;
-  padding: 2rem 10rem 4rem;
+  padding-bottom: 2rem;
 }
 
 .tabContent h1 {
@@ -112,6 +112,21 @@ body p {
 
 .tabContent pre {
   text-align: left;
+}
+
+.content {
+  width: 80%;
+  margin: auto;
+  padding: 1rem;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.content-container {
+  padding: 1rem;
+  vertical-align: middle;
 }
 
 #input-container {
@@ -152,7 +167,7 @@ body p {
   overflow: auto;
   background-color: white;
   color: #040f0fff;
-  padding-left: 2ex;
+  padding: 1ex 2ex;
 }
 
 #footer {

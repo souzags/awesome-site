@@ -60,7 +60,7 @@ body {
     font-size: larger;
     color: $rich-black-fogra-29;
     display: hide;
-    padding: 2rem 10rem 4rem;
+    padding-bottom: 2rem;
 
     h1 {
         font-family: boogaloo;
@@ -75,6 +75,19 @@ body {
     pre {
         text-align: left;
     }
+}
+
+.content {
+    width: 80%;
+    margin: auto;
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+}
+
+.content-container {
+    padding: 1rem;
+    vertical-align: middle;
 }
 
 #input-container {
@@ -117,7 +130,7 @@ body {
     overflow: auto;
     background-color: white;
     color: $rich-black-fogra-29;
-    padding-left: 2ex;
+    padding: 1ex 2ex;
 }
 
 #footer {
